@@ -1,4 +1,4 @@
-namespace PrefixMatcher;
+namespace PrefixMatch;
 
 public class DataStructure
 {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using PrefixMatcher;
+using PrefixMatch;
 
 namespace PrefixMatcherTests;
 
@@ -17,7 +17,7 @@ public class Tests
                 "school",
                 "something else"
             };
-        var matcher = new PrefixMatcher.PrefixMatcher(words);
+        var matcher = new PrefixMatcher(words);
         var expectedSuggestions = words;
 
         var nonUnique = matcher.Search("s");
@@ -58,7 +58,7 @@ public class Tests
             "sheer",
             "sheerwhatthisisntevenaword"
         };
-        var matcher = new PrefixMatcher.PrefixMatcher(words);
+        var matcher = new PrefixMatcher(words);
         var expectedSuggestions = words;
 
         var nonUnique = matcher.Search("s");
@@ -95,7 +95,7 @@ public class Tests
     [Test]
     public void WordAddedLater_ChangesSearchResults()
     {
-        var matcher = new PrefixMatcher.PrefixMatcher(
+        var matcher = new PrefixMatcher(
             new List<string>
             {
                 "hi"
