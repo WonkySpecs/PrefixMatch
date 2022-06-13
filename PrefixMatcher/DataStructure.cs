@@ -56,11 +56,19 @@ public class DataStructure
                 : Result.NoMatch();
         }
 
-        if (charNum == prefix.Length) return Result.NonUnique();
+        if (charNum == prefix.Length) return Result.NonUnique(TraverseLeaves());
 
         var letter = prefix[charNum];
         return _trails.ContainsKey(letter)
             ? _trails[letter].Search(prefix, charNum + 1)
             : Result.NoMatch();
+    }
+
+    private List<string> TraverseLeaves()
+    {
+        List<string> result = new();
+        if (_leaf != null) result.Add(_leaf);
+        result.AddRange(_trails.Values.SelectMany(v => v.TraverseLeaves()));
+        return result;
     }
 }
