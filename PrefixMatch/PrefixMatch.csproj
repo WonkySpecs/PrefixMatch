@@ -6,4 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <Title>PrefixMatch</Title>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Will Taylor</Authors>
+    <Description>Given a string, find the string it's a unique prefix of from a selection of strings, if it is one.</Description>
+    <RepositoryUrl>https://github.com/WonkySpecs/PrefixMatch</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" >
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
