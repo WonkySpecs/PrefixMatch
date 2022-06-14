@@ -5,7 +5,7 @@ Given a string, find the string it's a unique prefix of from a selection of stri
 ## Usage
 
 ```
-var matcher = new PrefixMatcher.PrefixMatcher(
+var matcher = new PrefixMatcher(
     new List<string>
     {
         "schedule",
