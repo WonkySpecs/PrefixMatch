@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\PrefixMatch\PrefixMatch.csproj" />
+      <ProjectReference Include="..\PrefixMatch\PrefixMatch.csproj" />
     </ItemGroup>
 
 </Project>
